@@ -6,16 +6,18 @@
 
 // Our variables
 $base-font-family: "Quattrocento Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+$base-font-size:   19px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 1.6;
 
 $spacing-unit:     30px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$brand-color:      #8617a9;
+$brand-color-dark: #270135;
+$brand-color-light:#552567;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -40,22 +42,57 @@ $on-laptop:        800px;
 @import "minima";
 
 // Changes
-h1, h2, h3, h4, h5, h6, .post-title {
+h1, h2, h3, h4, h5, h6, .post-title, .site-title {
   font-family: "Quattrocento", Georgia, "Times New Roman", Times, serif;
   font-weight: bold;
 }
+footer {
+  text-align: center;
+
+  a {
+    margin: 0 6px;
+  }
+}
+.footer-heading {
+  margin-bottom: 0;
+
+  > span {
+    font-size: 0.8em;
+    font-weight: normal;
+    font-family: $base-font-family;
+    color: $grey-color;
+    display: block;
+  }
+}
+.footer-col-wrapper {
+  margin-top: 20px;
+}
+.site-footer {
+  padding: 30px 0 60px;
+}
+p, blockquote, pre, ul, ol, dl, figure, .highlight {
+  margin-bottom: 30px;
+}
+.page-content {
+  padding: 60px 0;
+}
+// .post-header {
+//   margin-bottom: 60px;
+// }
+
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
+
 /**
  * Github's Octicons
  */
 .octicon {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: text-top;
   fill: currentColor;
 }
 .icon > svg,
@@ -65,4 +102,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 .icon > img {
   vertical-align: top;
+}
+
+// Colors
+body {
+  background: #270135;
+}
+.page-content {
+  background: #fff;
+}
+footer a,
+footer a:visited {
+  color: $grey-color;
+}
+.header,
+.site-nav .page-link,
+.site-title,
+.site-title:visited,
+.footer-heading,
+footer a:hover {
+  color: #fff;
+}
+a,
+a:visited {
+  color: $brand-color;
+}
+h1, h2, h3, h4, h5, h6, .post-title, .site-title {
+  color: $brand-color;
+}
+.site-header {
+  border-top-color: #552567;
+  // border-top-color: lighten($color: $brand-color-dark, $amount: 20%);
+}
+.site-title {
+
 }
