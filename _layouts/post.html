@@ -5,25 +5,40 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-    {% assign m = page.date | date: "%-m" %}
-    {{ page.date | date: "%-d" }}
-    {% case m %}
-      {% when '1' %}Jan
-      {% when '2' %}Fev
-      {% when '3' %}Mar
-      {% when '4' %}Abr
-      {% when '5' %}Mai
-      {% when '6' %}Jun
-      {% when '7' %}Jul
-      {% when '8' %}Ago
-      {% when '9' %}Set
-      {% when '10' %}Out
-      {% when '11' %}Nov
-      {% when '12' %}Dez
-    {% endcase %}
-    {{ page.date | date: "%Y" }}
-    </time>{% if page.author %} • por <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <p class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {% assign m = page.date | date: "%-m" %}
+      {{ page.date | date: "%-d" }}
+      {% case m %}
+        {% when '1' %}Jan
+        {% when '2' %}Fev
+        {% when '3' %}Mar
+        {% when '4' %}Abr
+        {% when '5' %}Mai
+        {% when '6' %}Jun
+        {% when '7' %}Jul
+        {% when '8' %}Ago
+        {% when '9' %}Set
+        {% when '10' %}Out
+        {% when '11' %}Nov
+        {% when '12' %}Dez
+      {% endcase %}
+      {{ page.date | date: "%Y" }}
+      </time>
+      {% if page.author %} • por <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
+      <div class="post-tag">
+        <ul>
+          {% for tag in page.tags %}
+          <li>
+            <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}" class="tag">
+              <span class="term">{{ tag }}</span>
+            </a>
+          </li>
+          {% unless forloop.last %}{% endunless %}
+          {% endfor %}
+        </ul>
+      </div>
+    </p>
   </header>
 
   <div class="post-content" itemprop="articleBody">

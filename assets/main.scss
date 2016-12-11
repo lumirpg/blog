@@ -2,7 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css?family=Quattrocento|Quattrocento+Sans');
+@import url('https://fonts.googleapis.com/css?family=Quattrocento|Quattrocento+Sans|Roboto+Mono');
 
 // Our variables
 $base-font-family: "Quattrocento Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -13,15 +13,17 @@ $base-line-height: 1.6;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
+$text-color:       #3a373f;
+$background-color: #f4f2f5;
 $brand-color:      #8617a9;
 $brand-color-dark: #270135;
 $brand-color-light:#552567;
 
 $grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+// $grey-color-light: lighten($grey-color, 40%);
+// $grey-color-dark:  darken($grey-color, 25%);
+$grey-color-light: lighten($background-color, 40%);
+$grey-color-dark:  darken($background-color, 25%);
 
 // Width of the content area
 $content-width:    800px;
@@ -75,6 +77,21 @@ p, blockquote, pre, ul, ol, dl, figure, .highlight {
 }
 .page-content {
   padding: 60px 0;
+
+  a:not(.tag),
+  a:visited:not(.tag) {
+    font-weight: bold;
+  }
+  .tag-index a,
+  .tag-index a:visited {
+    font-weight: normal;
+  }
+}
+.post-title {
+  margin-bottom: 10px;
+}
+.post-meta {
+  margin-bottom: 0;
 }
 // .post-header {
 //   margin-bottom: 60px;
@@ -101,6 +118,7 @@ h1, h2, h3, h4, h5, h6 {
   // vertical-align: middle;
 }
 .icon > img {
+  display: inline;
   vertical-align: top;
 }
 
@@ -109,7 +127,7 @@ body {
   background: #270135;
 }
 .page-content {
-  background: #fff;
+  background: $background-color;
 }
 footer a,
 footer a:visited {
@@ -121,7 +139,7 @@ footer a:visited {
 .site-title:visited,
 .footer-heading,
 footer a:hover {
-  color: #fff;
+  color: $background-color;
 }
 a,
 a:visited {
@@ -134,6 +152,226 @@ h1, h2, h3, h4, h5, h6, .post-title, .site-title {
   border-top-color: #552567;
   // border-top-color: lighten($color: $brand-color-dark, $amount: 20%);
 }
-.site-title {
+pre,
+code {
+  font-size: 0.9em;
+  border: 0;
+  border-radius: 0;
+  color: #000;
+  font-family: 'Roboto Mono', monospace;
+}
+pre,
+code,
+.highlighter-rouge .highlight {
+  background-color: #fff;
+}
+blockquote {
+  padding: 0 0 0 1.5rem;
+  margin: 0 2rem 1rem 0;
+  border-left: .5rem solid lighten($brand-color, 50);
+  font-size: 1.2em;
+}
+table {
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  border-collapse: collapse;
+}
+td, th {
+  padding: .25rem .5rem;
+  border: 1px solid #e5e5e5;
+}
+tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 0 1rem;
+}
+p.more {
+  box-shadow: inset 0 -80px 80px -5px rgba(244, 242, 245, 1);
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  height: 34px;
+  position: absolute;
+  bottom: -50px;
+  padding-top: 100px;
+  z-index: 1;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.3s;
+  margin: 0;
+  font-family: Quattrocento;
+  color: $brand-color;
+}
+/*--------------
+  Tags
+  -------------- */
+.tags-page {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+.post {
+  &-tag {
+    // margin-bottom: 1rem;
+    .tag {
+      display: inline-block;
+      margin: 4px;
+      margin-left: 0px;
+      color: #fff;
+      background-color: lighten($grey-color, 20%);
+      text-decoration: none;
+      border-radius: 3px;
+    }
+    li {
+      font-size: .8rem;
+      display: inline;
+      list-style-type: none;
+      text-transform: lowercase;
+    }
+    span {
+      float: left;
+      padding: .5px 5px;
+    }
+    ul {
+      margin-bottom: 0;
+      margin-left: 0;
+    }
+  }
+  &-share {
+    margin-bottom: 1rem;
+  }
+}
+.tag {
+  &-index {
+    font-size: .75rem;
+    display: inline;
+    list-style-type: none;
+    text-transform: lowercase;
 
+
+    a {
+      display: inline-block;
+      margin: 1px 4px;
+      color: #fff;
+      background-color: lighten($text-color,50);
+      border-radius: 3px;
+      span {
+        float: left;
+        padding: .5px 5px;
+      }
+      .count {
+        background-color: lighten($text-color,40);
+        border-radius: 0 3px 3px 0;
+      }
+      &:hover {
+        background-color: lighten($text-color,40);
+      }
+    }
+  }
+
+  &-title {
+    font-size: 1.4rem;
+    text-transform: lowercase;
+    padding-top: 1rem;
+  }
+
+  &-post {
+    padding-left: 0rem;
+    a {
+      color: $brand-color;
+      padding: 2px 6px;
+
+      &:hover {
+        color: $brand-color;
+        background-color: #fff;
+        border-color: transparent;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.page-content .tag-post a {font-weight: normal;}
+
+/*--------------
+  Post list
+  -------------- */
+
+.list {
+  &-post {
+    padding: 3% 2% 4%;
+
+    &:hover {
+      background-color: #fff;
+      border-color: transparent;
+      border-radius: 10px;
+    }
+
+    a {
+      color: $text-color;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    &-title {
+      margin-bottom: .25rem;
+      font-size : 2rem;
+      font-weight: 600;
+      font-family: "Quattrocento", Georgia, "Times New Roman", Times, serif;
+      color: $brand-color;
+    }
+
+    &-date {
+      color: lighten($text-color, 40);
+      font-size: .75rem;
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+
+    &-desc {
+      color: lighten($text-color, 20);
+      margin-bottom: .25rem;
+      font-weight: normal;
+      position: relative;
+      // font-size: 1rem;
+    }
+  }
+
+  &-pagination {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-transform: lowercase;
+
+    &-previous {
+      float: left;
+      padding-left: 2%;
+      a {
+        color: lighten($text-color, 40);
+
+        &:hover,
+        &:focus {
+          color: $text-color;
+          text-decoration: none;
+        }
+      }
+    }
+
+    &-next {
+      float: right;
+      padding-right: 2%;
+      a {
+        color: lighten($text-color, 40);
+
+        &:hover {
+          color: $text-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }

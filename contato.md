@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Contato
-permalink: /contato/
 ---
 
 Eu uso [Telegram][telegram], [Discord][discord], [Twitter][twitter] e o [fórum oficial do RPG Maker][forum]. Pode falar comigo por qualquer um desses canais.
@@ -18,3 +17,5 @@ Eu uso [Telegram][telegram], [Discord][discord], [Twitter][twitter] e o [fóru
 [me-telegram]: http://telegram.me/bsides
 [me-twitter]:  http://twitter.com/bsides
 [me-forum]:    http://forums.rpgmakerweb.com/index.php?/profile/11272-bsides
+
+Esses links também estão no rodapé para fácil acesso.
