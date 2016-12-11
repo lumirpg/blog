@@ -23,7 +23,7 @@ twitter_username: bsides
 github_username:  bsides
 google_analytics: UA-50702825-2
 disqus:
-  shortname: my_disqus_shortname
+  shortname: lumirpg
 
 # Build settings
 markdown: kramdown
