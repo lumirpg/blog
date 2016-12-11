@@ -50,3 +50,19 @@ h1, h2, h3, h4, h5, h6, .post-title {
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
+/**
+ * Github's Octicons
+ */
+.octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+}
+.icon > svg,
+.icon > img {
+  height: 16px;
+  // vertical-align: middle;
+}
+.icon > img {
+  vertical-align: top;
+}
