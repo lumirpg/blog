@@ -90,9 +90,6 @@ GEM
       activesupport (~> 4.0)
       html-pipeline (~> 2.3)
       jekyll (~> 3.0)
-    jekyll-octicons (3.0.1)
-      jekyll (~> 3.1)
-      octicons (~> 3.0)
     jekyll-optional-front-matter (0.1.2)
       jekyll (~> 3.0)
     jekyll-paginate (1.1.0)
@@ -134,8 +131,6 @@ GEM
     net-dns (0.8.0)
     nokogiri (1.6.8.1-x64-mingw32)
       mini_portile2 (~> 2.1.0)
-    octicons (3.0.1)
-      nokogiri (>= 1.6.3.1)
     octokit (4.6.2)
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.14.0)
@@ -166,8 +161,8 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-feed (~> 0.6)
-  jekyll-octicons
   jekyll-seo-tag
+  jekyll-sitemap
   minima (~> 2.0)
   wdm (>= 0.1.0)
 
