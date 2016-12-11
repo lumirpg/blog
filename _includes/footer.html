@@ -1,0 +1,79 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">
+      {{ site.title | escape }}
+      <span>{{ site.description | escape }}</span>
+    </h2>
+
+    <div class="footer-col-wrapper">
+      {% if site.github_username %}
+        {% include icon-github.html username=site.github_username %}
+      {% endif %}
+
+      {% if site.twitter_username %}
+        {% include icon-twitter.html username=site.twitter_username %}
+      {% endif %}
+
+      {% if site.discord_username %}
+        {% include icon-discord.html username=site.discord_username %}
+      {% endif %}
+
+      {% if site.forum_username %}
+        {% include icon-forum.html username=site.forum_username %}
+      {% endif %}
+
+<!--
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            {% if site.author %}
+              por {{ site.author | escape }}
+            {% else %}
+              {{ site.title | escape }}
+            {% endif %}
+            </li>
+            {% if site.email %}
+            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+
+          {% if site.twitter_username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter_username %}
+          </li>
+          {% endif %}
+
+          {% if site.discord_username %}
+          <li>
+            {% include icon-discord.html username=site.discord_username %}
+          </li>
+          {% endif %}
+
+          {% if site.forum_username %}
+          <li>
+            {% include icon-forum.html username=site.forum_username %}
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description | escape }}</p>
+      </div>
+-->
+    </div>
+
+  </div>
+
+</footer>
