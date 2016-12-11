@@ -43,8 +43,8 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
-  - jekyll-octicons
   - jekyll-seo-tag
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
