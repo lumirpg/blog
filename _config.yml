@@ -21,14 +21,19 @@ description: > # this means to ignore newlines until "baseurl:"
   Progresso do jogo de RPG Lumi feito no RPG Maker MV.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://lumirpg.tk" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: bsides
-github_username:  bsides
-discord_username: bsides#9436
-forum_username:   bsides
 repository:       lumirpg/blog
+timezone:         America/Sao_Paulo
 google_analytics: UA-50702825-2
 disqus:
   shortname: lumirpg
+twitter:
+  username:  bsides
+github:
+  username:  bsides
+discord:
+  username:  bsides#9436
+forum:
+  username:  bsides
 
 # Build settings
 markdown: kramdown
