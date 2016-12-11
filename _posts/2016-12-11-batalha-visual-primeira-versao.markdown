@@ -1,7 +1,6 @@
 ---
 title: Batalha - Visual, primeira versão
 layout: post
-categories: [batalha, visual]
 tags: [batalha, visual]
 date: 2016-12-11 19:52:29
 ---
