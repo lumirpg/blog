@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Blog</h1>
+
+  {{ content }}
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">
+        {% assign m = post.date | date: "%-m" %}
+        {{ post.date | date: "%-d" }}
+        {% case m %}
+          {% when '1' %}Jan
+          {% when '2' %}Fev
+          {% when '3' %}Mar
+          {% when '4' %}Abr
+          {% when '5' %}Mai
+          {% when '6' %}Jun
+          {% when '7' %}Jul
+          {% when '8' %}Ago
+          {% when '9' %}Set
+          {% when '10' %}Out
+          {% when '11' %}Nov
+          {% when '12' %}Dez
+        {% endcase %}
+        {{ post.date | date: "%Y" }}
+        </span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+</div>
