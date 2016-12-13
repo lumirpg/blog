@@ -38,6 +38,11 @@ layout: default
       <div class="list-post-title">
         {{ post.title }}
       </div>
+      {% if post.featured %}
+      <div class="list-post-featured">
+        <img src="{{ post.featured }}">
+      </div>
+      {% endif %}
       {% if post.excerpt %}
       <div class="list-post-desc">
         {{ post.excerpt }}

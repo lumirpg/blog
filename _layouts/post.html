@@ -41,6 +41,12 @@ layout: default
     </p>
   </header>
 
+  {% if page.featured %}
+  <div class="post-featured">
+    <img src="{{ page.featured }}">
+  </div>
+  {% endif %}
+
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
