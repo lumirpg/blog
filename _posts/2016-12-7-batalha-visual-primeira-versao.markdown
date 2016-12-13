@@ -1,8 +1,8 @@
 ---
 title: Batalha - Visual, primeira versão
 layout: post
+featured: https://puu.sh/sH8ox/6c2dba165f.jpg
 tags: [batalha, visual]
-date: 2016-12-11 19:52:29
 ---
 O principal do jogo pra mim é que a batalha seja divertida, bonita, bem pensada, organizada e com desafios. Decidi então fazer pelo menos que o básico não se pareça tanto com o padrão do RPG Maker.<!--more-->
 
