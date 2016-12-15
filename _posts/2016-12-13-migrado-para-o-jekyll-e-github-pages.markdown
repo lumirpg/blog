@@ -26,4 +26,3 @@ Para melhorar o visual do blog eu também fiz várias alterações no tema padr�
 Tenho agora um blog mais completo, que posso escrever diretamente no [Sublime](https://www.sublimetext.com/3) ou qualquer outro editor, como o [Visual Studio Code](https://code.visualstudio.com), que tenho usado bastante. E o melhor, com Markdown completo, com block de código colorido e sem frescura. Também tenho o poder de colocar imagens no [Puush](http://puush.me) como já estava fazendo e comentários com o [Disqus](https://disqus.com).
 
 O último passo será colocar o [Google AMP](https://www.ampproject.org) e fazer deploy do site no Github apenas do site publicado e não com o source todo. Esses eu planejo fazer mais pra frente, já que o AMP é super limitado e o deploy no Github tirar parte da praticidade de só escrever documentos no Jekyll.
-∎
