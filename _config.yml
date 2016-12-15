@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 encoding: utf-8
+lang: pt-BR
 title: Lumi
 author: bsides
 # email: rafaelbsides@gmail.com
@@ -27,6 +28,8 @@ excerpt_separator: <!--more-->
 repository:        lumirpg/blog
 timezone:          America/Sao_Paulo
 google_analytics:  UA-50702825-2
+sass:
+  style: compressed
 
 # Pagination
 paginate: 6
