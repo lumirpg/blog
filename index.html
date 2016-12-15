@@ -40,7 +40,7 @@ layout: default
       </div>
       {% if post.featured %}
       <div class="list-post-featured">
-        <img src="{{ site.url }}/assets/posts/{{ post.date | date: '%Y/%-m' }}/{{ post.featured }}" alt="Destaque: {{ post.title }}">
+        <img src="{{ site.url }}/{% if site.baseurl %}{{ site.baseurl }}{% endif %}assets/posts/{{ post.date | date: '%Y/%-m' }}/{{ post.featured }}" alt="Destaque: {{ post.title }}">
       </div>
       {% endif %}
       {% if post.excerpt %}
