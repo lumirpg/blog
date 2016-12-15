@@ -6,10 +6,6 @@
   <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
   {% endif %}
 
-
-  {% if jekyll.environment != 'production' %}
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  {% endif %}
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -17,7 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento|Quattrocento+Sans|Roboto+Mono">
-  {% if jekyll.environment != 'production' %}
+  {% if jekyll.environment == 'development' %}
   <link rel="stylesheet" href="{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}/assets/main.css">
   {% endif %}
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
