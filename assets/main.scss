@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6, .post-title, .site-title {
   color: $brand-color;
 }
 .site-header {
-  border-top-color: #552567;
+  border-top-color: $brand-color-light;
 }
 pre,
 code {
@@ -462,3 +462,15 @@ a.more {
   }
 }
 */
+
+@media screen and (max-width: 600px) {
+  .site-nav {
+    position: absolute;
+    top: 9px;
+    right: 15px;
+    background-color: $brand-color-light;
+    border: 0;
+    border-radius: 5px;
+    text-align: right;
+  }
+}

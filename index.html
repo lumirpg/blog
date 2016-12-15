@@ -46,12 +46,7 @@ layout: default
       {% if post.excerpt %}
       <div class="list-post-desc">
         {{ post.excerpt }}
-        {% if post.link %}
-        <a href="{{ post.link }}" class="more">
-        {% else %}
-        <a href="{{ post.url | prepend: site.baseurl }}" class="more">
-        {% endif %}
-        Continuar lendo</a>
+        {% if post.link %}<a href="{{ post.link }}" class="more">{% else %}<a href="{{ post.url | prepend: site.baseurl }}" class="more">{% endif %}Continuar lendo</a>
       </div>
       {% endif %}
     </a>
