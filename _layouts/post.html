@@ -43,7 +43,7 @@ layout: default
 
   {% if page.featured %}
   <div class="post-featured">
-    <img src="{{ page.featured }}">
+    <img src="{{ site.url }}/assets/posts/{{ page.date | date: '%Y/%-m' }}/{{ page.featured }}" alt="Destaque: {{ page.title }}">
   </div>
   {% endif %}
 
