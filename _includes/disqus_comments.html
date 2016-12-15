@@ -4,10 +4,11 @@
   {% elsif site.github.url %}
     {% assign disqus_url = page.url | prepend: site.github.url %}
   {% endif %}
-  <amp-iframe width=740 height=321
+  <amp-iframe width=600 height=140
               layout="responsive"
               sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
               resizable
               src="https://raw.githubusercontent.com/lumirpg/disqus/master/disqus.html#{{disqus_url}}">
+  <div id=disqusing overflow tabindex=0 role=button></div>
   </amp-iframe>
 {% endif %}
