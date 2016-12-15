@@ -3,12 +3,12 @@ title: Imagens locais
 layout: post
 tags: [meta]
 ---
-Sei que estou postando muito sobre o [Jekyll](http://jekyllrb.com) e pouco sobre o jogo em si, mas ele me ajudou tanto a resolver o formato e a infra do blog que resolvi postar sobre ele também. Afinal estou perdendo um tempo considerável nisso e é bom relatar de qualquer maneira. Hoje resolvi colocar as imagens do site localmente. Por que?
+Sei que estou postando muito sobre o [Jekyll](https://jekyllrb.com) e pouco sobre o jogo em si, mas ele me ajudou tanto a resolver o formato e a infra do blog que resolvi postar sobre ele também. Afinal estou perdendo um tempo considerável nisso e é bom relatar de qualquer maneira. Hoje resolvi colocar as imagens do site localmente. Por que?
 <!--more-->
 
 ## Antes: Usando Puush e ShareX
 
-Estava hospedando as imagens no [Puush](http://puush.me). Primeiro porque é muito simples escrever markdown com imagens externas, a tag é como um link, fácil e intuitiva:
+Estava hospedando as imagens no [Puush](https://puush.me). Primeiro porque é muito simples escrever markdown com imagens externas, a tag é como um link, fácil e intuitiva:
 
 ```
 ![](link-para-a-imagem)

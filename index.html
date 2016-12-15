@@ -40,7 +40,7 @@ layout: default
       </div>
       {% if post.featured.name %}
       <div class="list-post-featured">
-        <amp-img src="{{ site.url }}/assets/posts/{{ post.date | date: '%Y/%-m' }}/{{ post.featured.name }}" alt="Destaque: {{ post.title }}" width="{{ post.featured.width }}" height="{{ post.featured.height }}" layout="responsive"></amp-img>
+        <amp-img src="{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}/assets/posts/{{ post.date | date: '%Y/%-m' }}/{{ post.featured.name }}" alt="Destaque: {{ post.title }}" width="{{ post.featured.width }}" height="{{ post.featured.height }}" layout="responsive"></amp-img>
       </div>
       {% endif %}
       {% if post.excerpt %}

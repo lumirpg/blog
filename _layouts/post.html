@@ -43,7 +43,7 @@ layout: default
 
   {% if page.featured.name %}
   <div class="post-featured">
-    <amp-img src="{{ site.url }}/assets/posts/{{ page.date | date: '%Y/%-m' }}/{{ page.featured.name }}" alt="Destaque: {{ page.title }}" width="{{ page.featured.width }}" height="{{ page.featured.height }}" layout="responsive"></amp-img>
+    <amp-img src="{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}/assets/posts/{{ page.date | date: '%Y/%-m' }}/{{ page.featured.name }}" alt="Destaque: {{ page.title }}" width="{{ page.featured.width }}" height="{{ page.featured.height }}" layout="responsive"></amp-img>
   </div>
   {% endif %}
 

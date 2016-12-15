@@ -11,7 +11,7 @@ O principal do jogo pra mim é que a batalha seja divertida, bonita, bem pensada
 
 Comecei com os menus de batalha:
 
-{% include image name="b3y3IFb.png" %}
+{% include image name="b3y3IFb.jpg" %}
 
 Minha inspiração principal foi o menu de Final Fantasy X, Final Fantasy XII e Dissidia Final Fantasy. Dá pra ver que acabou ficando muito mais próximo do X que do restante.
 

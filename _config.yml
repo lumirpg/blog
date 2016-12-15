@@ -20,8 +20,10 @@ author: bsides
 # email: rafaelbsides@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Progresso do jogo de RPG Lumi feito no RPG Maker MV.
+# baseurl: "/blog" # the subpath of your site, e.g. /blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://lumirpg.tk" # the base hostname & protocol for your site, e.g. http://example.com
+# url: "https://lumirpg.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://lumirpg.tk" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Meta
 excerpt_separator: <!--more-->
@@ -58,6 +60,7 @@ gems:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-relative-links
 exclude:
   - Gemfile
   - Gemfile.lock
