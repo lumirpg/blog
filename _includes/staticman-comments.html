@@ -1,7 +1,7 @@
 {% if page.comments != false and jekyll.environment == "production" %}
 <form method="post" action-xhr="https://api.staticman.net/v2/entry/lumirpg/blog/master/comments" target="_blank">
   <input name="options[redirect]" type="hidden" value="">
-  <input name="options[origin]" value="{{ site.url }}{{ page.url }}" type="hidden">
+  <!-- <input name="options[origin]" value="{{ site.url }}{{ page.url }}" type="hidden"> -->
   <!-- e.g. "2016-01-02-this-is-a-post" -->
   <input name="options[slug]" type="hidden" value="{{ page.slug }}">
   <label><input name="fields[name]" type="text">Nome</label>
