@@ -17,16 +17,12 @@
   <link rel="stylesheet" href="{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}/assets/main.css">
   {% endif %}
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-  <style amp-custom>
+
   {% if jekyll.environment == 'production' %}
-  {% for file in site.static_files %}
-  {% if file.name == "main.css" %}
-  {% include {{ site.baseurl }}/{{ file.path }}/{{ file.name }} %}
-  /* {{ site.baseurl }}/{{ file.path }}/{{ file.name }} */
-  {% endif %}
-  {% endfor %}
-  {% endif %}
+  <style amp-custom>
+  {% include main.css %}
   </style>
+  {% endif %}
 
   {% seo %}
 </head>
