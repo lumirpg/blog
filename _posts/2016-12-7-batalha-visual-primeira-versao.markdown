@@ -1,8 +1,11 @@
 ---
 title: Batalha - Visual, primeira versão
 layout: post
-featured: b3y3IFb.jpg
 tags: [batalha, visual]
+featured:
+  name: b3y3IFb.jpg
+  width: 1248
+  height: 720
 ---
 O principal do jogo pra mim é que a batalha seja divertida, bonita, bem pensada, organizada e com desafios. Decidi então fazer pelo menos que o básico não se pareça tanto com o padrão do RPG Maker.<!--more-->
 

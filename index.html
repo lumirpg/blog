@@ -38,9 +38,9 @@ layout: default
       <div class="list-post-title">
         {{ post.title }}
       </div>
-      {% if post.featured %}
+      {% if post.featured.name %}
       <div class="list-post-featured">
-        <img src="{{ site.url }}/assets/posts/{{ post.date | date: '%Y/%-m' }}/{{ post.featured }}" alt="Destaque: {{ post.title }}">
+        <amp-img src="{{ site.url }}/assets/posts/{{ post.date | date: '%Y/%-m' }}/{{ post.featured.name }}" alt="Destaque: {{ post.title }}" width="{{ post.featured.width }}" height="{{ post.featured.height }}" layout="responsive"></amp-img>
       </div>
       {% endif %}
       {% if post.excerpt %}

@@ -2,7 +2,10 @@
 title: Apresentando posições
 layout: post
 tags: [batalha, posições, sequências]
-featured: gIVKXuN.png
+featured:
+  name: gIVKXuN.png
+  width: 1248
+  height: 720
 ---
 Lumi não esperava por essa! Para protegê-la, Alvaro empurra Lumi pra retaguarda.
 
