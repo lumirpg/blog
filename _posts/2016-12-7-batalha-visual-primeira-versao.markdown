@@ -11,17 +11,17 @@ O principal do jogo pra mim é que a batalha seja divertida, bonita, bem pensada
 
 Comecei com os menus de batalha:
 
-{% include image name="b3y3IFb.jpg" %}
+{% include image name="b3y3IFb.jpg" width="1248" height="720" %}
 
 Minha inspiração principal foi o menu de Final Fantasy X, Final Fantasy XII e Dissidia Final Fantasy. Dá pra ver que acabou ficando muito mais próximo do X que do restante.
 
-{% include image name="Bcx4p4u.png" %}
+{% include image name="Bcx4p4u.png" width="1248" height="720" %}
 
 O que está mais pronto é o layout do menu de atores e o layout do menu de Grupo, ali embaixo e à esquerda (ActorCommand e PartyCommand).
 
 O menu de poderes (Skill) ainda preciso resolver se ficará assim mesmo. Eu gostaria que o menu "Mochila" (Items) lembrasse o interior de uma mochila, mas não sei se conseguirei os recursos pra isso em tempo. Se os dois conseguirem ficar no mesmo estilo, eu vou deixá-los assim mesmo.
 
-{% include image name="6dhoLW4.png" %}
+{% include image name="6dhoLW4.png" width="1248" height="720" %}
 
 A tooltip do poder em si ainda não está boa (à direita), pois eu quero muito mais informações ali. Como estou capturando a `log_window` (ou seria `help_window`?) da `Scene_Battle` pra colocar esses dados, todas as informações da batalha estão indo ali. O ideal é criar uma `help_window` separada. Tenho a intenção também de fazer um plugin que leia as notetags de alguns dados extras, como Custo (energia, vida, especial, outra coisa?), Duração (se for melhoria, quanto tempo o alvo fica, em turnos), Recarga (Cooldown), Tempo de Lançamento (Cast Time), Alvo (1 inimigo, múltilpos inimigos, todos), etc - pra organizar e trazer a maior quantidade de informações possíveis sobre a magia. Parto do pressuposto que já que aquele personagem sabe lançar essa magia ele sabe muito bem sobre ela, certo? Isso terá que ser refletido também no menu principal das habilidades, quando aberto no mapa.
 
