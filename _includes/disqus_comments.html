@@ -4,22 +4,10 @@
   {% elsif site.github.url %}
     {% assign disqus_url = page.url | prepend: site.github.url %}
   {% endif %}
-
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = '{{ disqus_url }}';
-      this.page.identifier = '{{ disqus_url }}';
-    };
-
-    (function() {
-      var d = document, s = d.createElement('script');
-
-      s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
-
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript>Por favor, habilite o JavaScript para ver os <a href="https://disqus.com/?ref_noscript" rel="nofollow">comentários fornecidos pelo Disqus.</a></noscript>
+  <amp-iframe width=740 height=321
+              layout="responsive"
+              sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+              resizable
+              src="https://raw.githubusercontent.com/lumirpg/disqus/master/disqus.html#{{disqus_url}}">
+  </amp-iframe>
 {% endif %}
