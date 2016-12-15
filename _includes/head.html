@@ -6,7 +6,6 @@
   <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
   {% endif %}
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
 
   {% if jekyll.environment != 'production' %}
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
