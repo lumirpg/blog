@@ -2,7 +2,7 @@
 title: Migrado para o Jekyll e Github Pages
 layout: post
 tags: [meta]
-featured: https://puu.sh/sOuBM/673261e6a3.jpg
+featured: http://i.imgur.com/gCEEwWq.png
 ---
 Não consegui achar uma ferramenta de blog que tivesse um editor de Markdown competente. Ambos [Wordpress](http://wordpress.com) e [Tumblr](http://tumblr.com) prometem a ferramenta, mas apresentam de forma super pobre. [Como já disse antes]({% post_url 2016-12-11-mudanca-de-host %}) eu entendo que o público alvo desses sites são muito amplos para atender esse tipo de especificação, então eu achei melhor mudar de vez de ferramenta.
 <!--more-->
