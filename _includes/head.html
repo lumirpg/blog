@@ -18,11 +18,9 @@
   {% endif %}
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
-  {% if jekyll.environment == 'production' %}
   <style amp-custom>
-  {% include main.css %}
+  {% include_sass main.scss %}
   </style>
-  {% endif %}
 
   {% seo %}
 </head>

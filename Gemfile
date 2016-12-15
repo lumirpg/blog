@@ -25,6 +25,7 @@ group :jekyll_plugins do
    gem 'jekyll-sitemap'
    gem 'jekyll-paginate'
    gem 'jekyll-relative-links'
+   gem 'jekyll-include_sass'
 end
 
 # To avoid polling for changes problems
