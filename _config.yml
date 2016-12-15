@@ -61,7 +61,6 @@ gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-relative-links
-  - jekyll-include_sass
 exclude:
   - Gemfile
   - Gemfile.lock
