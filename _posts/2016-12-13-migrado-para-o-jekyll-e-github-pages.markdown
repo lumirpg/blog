@@ -11,13 +11,13 @@ Eu já havia flertado com o [Jekyll](https://jekyllrb.com/) antes, mas achava mu
 
 O guia no site do Jekyll é bem simples de usar. Eu instalei o ruby via [Chocolatey](https://chocolatey.org/) e o resto foi bem simples, apesar de trabalhoso.
 
-![](https://puu.sh/sOvGN/4be4f760e7.png)
+![](http://i.imgur.com/07hxUuB.png)
 
 O mais chato foi ter que adicionar variáveis de sistema no Windows, algo que nunca precisei, mas que é necessário para que o certificado SSL não dê erros. Peguei um certificado [daqui](https://curl.haxx.se/ca/cacert.pem) e coloquei como variável do sistema. Também [gerei um token](https://github.com/settings/tokens/new) pro Jekyll no github.
 
-![](https://puu.sh/sOuU4/c1b7416165.png)
+![](http://i.imgur.com/NNuosui.png)
 
-![](https://puu.sh/sOuY9/aaf9336b56.png)
+![](http://i.imgur.com/pZQ0UKY.png)
 
 Além disso, tive que instalar o [Ruby Dev Kit](http://rubyinstaller.org/downloads/) e fazê-lo funcionar com o Ruby da máquina, o que pareceu complicado, mas não foi nada de outro mundo - basta fazer rodá-lo com o path da máquina.
 
