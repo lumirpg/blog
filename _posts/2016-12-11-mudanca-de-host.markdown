@@ -1,8 +1,11 @@
 ---
 title: Mudança de host?
 layout: post
-featured: PhuRsQ1.png
 tags: [meta]
+featured:
+  name: PhuRsQ1.png
+  width: 881
+  height: 654
 ---
 Estou estudando a possibilidade de mudança de host. A vida toda acostumei em ter o próprio servidor VPS, porém como atualmente estou falido, não estou podendo. Sempre hospedei meus sites do meu jeito, com meus softwares e o Wordpress ou <a href="https://ghost.org" target="_blank">Ghost</a> foram ferramentas que usei no passado que ajudaram muito. Entretanto essa versão pública do Wordpress é muito pobre no editor markdown, o que me deixa muito insatisfeito.
 <!--more-->

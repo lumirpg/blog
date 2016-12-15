@@ -64,3 +64,4 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - lumirpgblog.sublime-*
