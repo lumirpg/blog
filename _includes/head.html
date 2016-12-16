@@ -6,10 +6,12 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento|Quattrocento+Sans|Roboto+Mono">
 
   <link rel="stylesheet" href="{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}/assets/main.css">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  
   {% if jekyll.environment == 'production' and site.google_analytics %}
   {% include google-analytics.html %}
   {% endif %}
+
   {% seo %}
 </head>

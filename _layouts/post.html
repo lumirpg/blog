@@ -41,9 +41,9 @@ layout: default
     </p>
   </header>
 
-  {% if page.featured %}
+  {% if page.featured.name %}
   <div class="post-featured">
-    <img src="{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}/assets/posts/{{ page.date | date: '%Y/%-m' }}/{{ page.featured }}" alt="Destaque: {{ page.title }}">
+    <amp-img src="{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}/assets/posts/{{ page.date | date: '%Y/%-m' }}/{{ page.featured.name }}" alt="Destaque: {{ page.title }}" width="{{ page.featured.width }}" height="{{ page.featured.height }}" layout="responsive"></amp-img>
   </div>
   {% endif %}
 
@@ -53,5 +53,8 @@ layout: default
 
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
+  {% endif %}
+  {% if site.staticman %}
+    {% include staticman-comments.html %}
   {% endif %}
 </article>
