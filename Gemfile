@@ -32,3 +32,6 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 # To check html for missing links
 gem 'html-proofer'
+
+# For travis
+gem 'rake'
