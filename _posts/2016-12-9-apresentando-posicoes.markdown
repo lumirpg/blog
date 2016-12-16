@@ -2,14 +2,17 @@
 title: Apresentando posições
 layout: post
 tags: [batalha, posições, sequências]
-featured: gIVKXuN.png
+featured:
+  name: gIVKXuN.png
+  width: 1248
+  height: 720
 ---
 Lumi não esperava por essa! Para protegê-la, Alvaro empurra Lumi pra retaguarda.
 
 Para facilitar a introdução sobre posições em batalha, do plugin do <a href="http://yanfly.moe/2016/01/02/yep-54-row-formation/" target="_blank">Yanfly Row Formation</a>, resolvi fazer um Action Sequence que cabe dentro do meu jogo. Ainda não estou 100% satisfeito com o resultado, mas está 90% do que pretendo.
 <!--more-->
 
-{% include image name="wP6h7mx.gif" %}
+{% include image name="wP6h7mx.gif" width="1250" height="752" %}
 
 Pra conseguir esse efeito, eu usei os seguintes plugins do [Yanfly](http://yanfly.moe/yep/): [Battle Engine Core](http://yanfly.moe/2015/10/10/yep-3-battle-engine-core), <a href="http://yanfly.moe/2015/10/11/yep-4-action-sequence-pack-1/" target="_blank">Action Sequences 1</a>, <a href="http://yanfly.moe/2015/10/12/yep-5-action-sequence-pack-2/" target="_blank">Action Sequences 2</a>, <a href="http://yanfly.moe/2015/10/12/yep-6-action-sequence-pack-3/" target="_blank">Action Sequences 3</a> - provavelmente não precisa desse último, mas pretendo adicionar alguns efeitos de câmera mais pra frente. Para os efeitos nas mensagens, <a href="http://yanfly.moe/2015/10/10/yep-2-message-core/" target="_blank">Message Core</a>, <a href="http://yanfly.moe/2016/01/30/yep-65-extended-message-pack-1/" target="_blank">Extended Message Pack 1</a>, <a href="http://yanfly.moe/2016/02/21/yep-73-message-macros-rpg-maker-mv/" target="_blank">Message Macros</a> e claro, pra posicionar, o <a href="http://yanfly.moe/2016/01/02/yep-54-row-formation/" target="_blank">Row Formation</a>. Pra não precisar explicar tudo isso de novo, eu vou colocar isso no site em algum lugar em breve.
 
