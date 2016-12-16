@@ -1,9 +1,0 @@
-/*
-  X-Frame-Options: DENY
-  X-XSS-Protection: 1; mode=block
-  Access-Control-Allow-Credentials: true
-  Access-Control-Allow-Origin: https://lumirpg.tk
-  Vary: Origin
-  AMP-Access-Control-Allow-Source-Origin: https://api.staticman.net
-  Access-Control-Expose-Headers: AMP-Access-Control-Allow-Source-Origin
-  AMP-Same-Origin: true

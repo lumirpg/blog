@@ -4,11 +4,23 @@
   {% elsif site.github.url %}
     {% assign disqus_url = page.url | prepend: site.github.url %}
   {% endif %}
-  <amp-iframe width=600 height=140
-              layout="responsive"
-              sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
-              resizable
-              src="https://lumirpg.github.io/disqus/disqus.html#{{disqus_url}}">
-  <div id=disqusing overflow tabindex=0 role=button></div>
-  </amp-iframe>
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = '{{ disqus_url }}';
+      this.page.identifier = '{{ disqus_url }}';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
 {% endif %}

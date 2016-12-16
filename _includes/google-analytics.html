@@ -1,56 +1,10 @@
-<amp-analytics type="googleanalytics" id="analytics1">
-<script type="application/json">
-{
-  "vars": {
-    "account": "{{ site.google_analytics }}"
-  },
-  "triggers": {
-    "trackPageview": {
-      "on": "visible",
-      "request": "pageview"
-    }
-  }
-}
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '{{ site.google_analytics }}', 'auto');
+  ga('send', 'pageview');
+
 </script>
-</amp-analytics>
-<amp-analytics type="googleanalytics" id="analytics2">
-<script type="application/json">
-{
-  "vars": {
-    "account": "{{ site.google_analytics }}"
-  },
-  "triggers": {
-    "trackClickOnHeader" : {
-      "on": "click",
-      "selector": ".site-header",
-      "request": "event",
-      "vars": {
-        "eventCategory": "ui-components",
-        "eventAction": "header-click"
-      }
-    }
-  }
-}
-</script>
-</amp-analytics>
-<amp-analytics type="googleanalytics" id="analytics3">
-<script type="application/json">
-{
-  "vars": {
-    "account": "{{ site.google_analytics }}"
-  },
-  "triggers": {
-    "trackClickOnTwitterLink" : {
-      "on": "click",
-      "selector": "#twitter-link",
-      "request": "social",
-      "vars": {
-          "socialNetwork": "twitter",
-          "socialAction": "tweet",
-          "socialTarget": "https://lumirpg.tk"
-      }
-    }
-  }
-}
-</script>
-</amp-analytics>

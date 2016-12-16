@@ -38,9 +38,9 @@ paginate: 6
 paginate_path: /pag:num/
 
 # Social
-staticman: true
+staticman: false
 disqus:
-  shortname:
+  shortname: lumirpg
 twitter:
   username:  bsides
 github:
