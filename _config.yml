@@ -66,5 +66,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - lumirpgblog.sublime-*
+  - vendor
 include:
   - _header
