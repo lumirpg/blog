@@ -80,6 +80,7 @@ GEM
       ethon (>= 0.8.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    wdm (0.1.1)
     yell (2.0.7)
 
 PLATFORMS
@@ -96,9 +97,10 @@ DEPENDENCIES
   jekyll-sitemap
   minima (~> 2.0)
   rake
+  wdm (>= 0.1.0)
 
 RUBY VERSION
-   ruby 2.3.3p222
+   ruby 2.3.1p112
 
 BUNDLED WITH
    1.13.6
