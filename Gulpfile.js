@@ -1,4 +1,4 @@
-// var config = require('./gulpconfig.json');
+var config = require('./gulpconfig.json');
 var gulp = require('gulp');
 var shell = require('gulp-shell');
 var htmlmin = require('gulp-htmlmin');
@@ -14,7 +14,11 @@ var gifsicle = require('imagemin-gifsicle');
 var optipng = require('imagemin-optipng');
 var replace = require('gulp-replace');
 var fs = require('fs');
-var download = require('gulp-download');
+var download = require('gulp-download-stream');
+var gutil = require('gulp-util');
+var concat = require('gulp-concat');
+var webFontsBase64 = require('gulp-google-fonts-base64-css');
+var del = require('del');
 
 gulp.task('jekyll', function() {
   return gulp.src('index.html', { read: false })
@@ -28,6 +32,7 @@ gulp.task('optimize-images', function() {
     .pipe(imagemin({
       progressive: false,
       svgoPlugins: [{ removeViewBox: false }],
+      verbose: true,
       use: [pngquant(), jpegtran(), gifsicle(), optipng()]
     }))
     .pipe(gulp.dest('_site/'));
@@ -38,11 +43,12 @@ gulp.task('optimize-css', function() {
     .pipe(autoprefixer())
     .pipe(uncss({
       html: ['_site/**/*.html'],
+      stylesheets: ['_site/assets/main.css'],
       ignore: []
     }))
     .pipe(cleanCss({ debug: true }, function(details) {
-      console.log(details.name + ': ' + details.stats.originalSize);
-      console.log(details.name + ': ' + details.stats.minifiedSize);
+      gutil.log('  ', details.name, ' original size: ', gutil.colors.magenta(details.stats.originalSize));
+      gutil.log('  ', details.name, ' minified size: ', gutil.colors.magenta(details.stats.minifiedSize));
     }))
     .pipe(gulp.dest('_site/assets/'));
 });
@@ -50,21 +56,62 @@ gulp.task('optimize-css', function() {
 gulp.task('optimize-html', function() {
   return gulp.src('_site/**/*.html')
     .pipe(htmlmin({
-      collapseInlineTagWhitespace: true,
+      // collapseInlineTagWhitespace: true,
       // conservativeCollapse: true,
       collapseWhitespace: true,
+      preserveLineBreaks: true
     }))
-    .pipe(replace(/<link href=\"\/assets\/main.css\"[^>]*>/, function(s) {
-      var style = fs.readFileSync('_site/assets/main.css', 'utf8');
+    .pipe(replace(/<link rel=\"stylesheet\" href=\"https:\/\/lumirpg.tk\/assets\/main.css\">/g, function(s) {
+      var style = fs.readFileSync('_site/assets/s.css', 'utf8');
       return '<style>\n' + style + '\n</style>';
     }))
     .pipe(gulp.dest('_site/'));
 });
 
 gulp.task('fetch-newest-analytics', function() {
-  return download('https://www.google-analytics.com/analytics.js')
-    .pipe(gulp.dest('assets/meta/'));
+  return download({ file: 'analytics.js', url: 'https://www.google-analytics.com/analytics.js' })
+    .pipe(gulp.dest('./_site/assets/meta/'));
 });
+
+// gulp.task('fetch-google-webfonts-meta', function() {
+//   return download({ file: 'fonts.css', url: 'https://fonts.googleapis.com/css?family=Quattrocento|Quattrocento+Sans|Roboto+Mono' })
+//     .pipe(gulp.dest('./_site/assets/'));
+// });
+
+// gulp.task('fetch-google-webfonts', function() {
+//   var meta = fs.readFileSync('./_site/assets/fonts.css', 'utf8');
+//   meta = meta.match(/url(?:\(['"]?)(.*?)(?:['"]?\))/gi);
+//   for (var i = 0; i < meta.length; i++) {
+//     meta[i] = meta[i].replace(/(url\(|\)|")/g, '');
+//   };
+//   return download(meta)
+//     .pipe(gulp.dest('./_site/assets/meta'));
+// });
+
+// gulp.task('replace-google-webfonts-for-local', function() {
+
+// });
+
+gulp.task('concat-google-webfonts-into-css', function() {
+  return gulp.src(['./_site/assets/fonts.css', './_site/assets/main.css'])
+    .pipe(concat('s.css', {newLine: ';'}))
+    .pipe(gulp.dest('./_site/assets'));
+});
+
+gulp.task('fetch-fonts-to-base64', function() {
+  return gulp.src('./fonts.list')
+    .pipe(webFontsBase64())
+    .pipe(concat('fonts.css'))
+    .pipe(gulp.dest('./_site/assets/'));
+});
+
+gulp.task('remove-unneeded-files', function() {
+  return del([
+    './_site/assets/main.css',
+    './_site/assets/fonts.css',
+    './_site/assets/s.css'
+  ]);
+})
 
 // gulp.task('rsync-files', function() {
 //   return gulp.src('index.html', { read: false })
@@ -105,11 +152,14 @@ gulp.task('dry-run', function(callback) {
 
 gulp.task('deploy', function(callback) {
   runSequence(
-    'fetch-newest-analytics',
     'jekyll',
+    'fetch-newest-analytics',
+    'fetch-fonts-to-base64',
     'optimize-images',
     'optimize-css',
+    'concat-google-webfonts-into-css',
     'optimize-html',
+    'remove-unneeded-files',
     // 'rsync-files',
     // 'purge-cache',
     callback

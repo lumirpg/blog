@@ -69,5 +69,7 @@ exclude:
   - package.json
   - node_modules
   - gulpfile.js
-include:
-  - _header
+  - fonts.list
+  - Gulpfile.js
+  - gulpconfig.json
+  - staticman.yml
