@@ -4,3 +4,4 @@ _site
 lumirpgblog.sublime-project
 lumirpgblog.sublime-workspace
 node_modules
+gulp-test-speed.js

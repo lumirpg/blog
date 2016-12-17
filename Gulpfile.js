@@ -111,7 +111,7 @@ gulp.task('remove-unneeded-files', function() {
     './_site/assets/fonts.css',
     './_site/assets/s.css'
   ]);
-})
+});
 
 // gulp.task('rsync-files', function() {
 //   return gulp.src('index.html', { read: false })
