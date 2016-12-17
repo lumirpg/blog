@@ -3,3 +3,4 @@ _site
 .jekyll-metadata
 lumirpgblog.sublime-project
 lumirpgblog.sublime-workspace
+node_modules
