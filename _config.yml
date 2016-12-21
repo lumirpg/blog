@@ -32,6 +32,8 @@ timezone:          America/Sao_Paulo
 google_analytics:  UA-50702825-2
 sass:
   style: compressed
+emoji:
+  src: "/assets/meta"
 
 # Pagination
 paginate: 6
@@ -62,6 +64,7 @@ gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-relative-links
+  - jemoji
 exclude:
   - Gemfile
   - Gemfile.lock
