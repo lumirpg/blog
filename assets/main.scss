@@ -416,3 +416,14 @@ a.more {
 .environment {
   color: $background-color;
 }
+
+.emoji {
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+.table-colors td:nth-child(5),
+.table-colors td:last-child {
+    font-size: 0.8em;
+    width: 25%;
+}
