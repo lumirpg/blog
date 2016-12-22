@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Contato
+comments: true
 ---
 
 Eu uso [Telegram][telegram], [Discord][discord], [Twitter][twitter] e o [fórum oficial do RPG Maker][forum]. Pode falar comigo por qualquer um desses canais.
