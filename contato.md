@@ -20,3 +20,5 @@ Eu uso [Telegram][telegram], [Discord][discord], [Twitter][twitter] e o [fóru
 [me-forum]:    http://forums.rpgmakerweb.com/index.php?/profile/11272-bsides
 
 Esses links também estão no rodapé para fácil acesso.
+
+Além desses, você também pode usar o espaço de comentários do Disqus abaixo - ou no post específico da sua pergunta.
