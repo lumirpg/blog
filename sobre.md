@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Sobre
-permalink: /sobre/
+comments: false
 ---
 
 Sempre sonhei em fazer um jogo e publicá-lo, para que pessoas jogassem. Depois de alguns anos aprendendo como se faz um jogo, percebi que fazer isso sozinho é muito difícil. São tantos detalhes, uma montanha infinita de programação, desenho, planejamento, estratégia...
