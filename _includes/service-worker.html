@@ -1,0 +1,23 @@
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/serviceWorker.js').then(function(registration) {
+      if (!registration.installing) return;
+            console.log("[*] ServiceWorker está instalando...");
+
+      var worker = registration.installing;
+      worker.addEventListener('statechange', function() {
+          if (worker.state == 'redundant') {
+              console.log('[*] Instalação falhou');
+          }
+          if (worker.state == 'installed') {
+              console.log('[*] Instalado com sucesso!');
+          }
+      });
+    }).catch(function(err) {
+      // registration failed :(
+      console.log('Falhou ao registrar o ServiceWorker: ', err);
+    });
+  });
+}
+</script>

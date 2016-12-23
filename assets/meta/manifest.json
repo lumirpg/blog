@@ -1,5 +1,5 @@
 {
- "name": "App",
+ "name": "Lumi RPG",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
@@ -37,5 +37,9 @@
    "type": "image\/png",
    "density": "4.0"
   }
- ]
+ ],
+  "background_color": "#f4f2f5",
+  "theme_color": "#552567",
+  "display": "standalone",
+  "orientation": "portrait"
 }
