@@ -17,7 +17,7 @@ Eu uso [Telegram][telegram], [Discord][discord], [Twitter][twitter] e o [fóru
 [forum]:       http://forums.rpgmakerweb.com
 [me-telegram]: https://telegram.me/bsides
 [me-twitter]:  https://twitter.com/bsides
-[me-forum]:    http://forums.rpgmakerweb.com/index.php?/profile/11272-bsides
+[me-forum]:    https://forums.rpgmakerweb.com/index.php?members/bsides.11272/
 
 Esses links também estão no rodapé para fácil acesso.
 
