@@ -1,5 +1,5 @@
 ---
-title: Lumi: Personagem & Raça
+title: Lumi - Personagem & Raça
 layout: post
 tags: [lumi, personagens, raças, história]
 featured: lumi-faces.png
