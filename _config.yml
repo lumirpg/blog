@@ -36,7 +36,7 @@ emoji:
   src: "/assets/meta"
 
 # Pagination
-paginate: 6
+paginate: 10
 paginate_path: /pag:num/
 
 # Social
@@ -76,3 +76,5 @@ exclude:
   - Gulpfile.js
   - gulpconfig.json
   - staticman.yml
+include:
+  - _redirects
