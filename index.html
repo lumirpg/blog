@@ -59,7 +59,7 @@ comments: false
       {% if paginator.previous_page %}
         <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous">
           <i class="fa fa-angle-left" aria-hidden="true"></i>
-          Anterior
+          Mais novos
         </a>
       {% else %}
 
@@ -69,7 +69,7 @@ comments: false
     <span class="list-pagination-next">
       {% if paginator.next_page %}
         <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">
-          Próximo
+          Mais antigos
           <i class="fa fa-angle-right" aria-hidden="true"></i>
         </a>
       {% else %}
