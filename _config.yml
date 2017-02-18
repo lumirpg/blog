@@ -36,7 +36,7 @@ emoji:
   src: "/assets/meta"
 
 # Pagination
-paginate: 10
+paginate: 6
 paginate_path: /pag:num/
 
 # Social
