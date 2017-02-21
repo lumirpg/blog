@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
 // Colors
 body {
   background: #270135;
-  margin: 0;
+  margin: 0 !important;
 }
 .page-content {
   background: $background-color;
